@@ -27,7 +27,7 @@ const {
             PhoneNumber: randPhoneNumber(),
             Company: randBrand(),
             Number: randNumber(),
-            Adress: randAddress(),
+            Address: randAddress(),
             City: randCity(),
             State: randState(),
             Zip: randZipCode(),
