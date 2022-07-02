@@ -22,15 +22,15 @@ const {
             email: randEmail(),
             account: randAccount(),
             password: randPassword(),
-            LastName: randLastName(),
-            FirstName: randFirstName(),
-            PhoneNumber: randPhoneNumber(),
-            Company: randBrand(),
-            Number: randNumber(),
-            Address: randAddress(),
-            City: randCity(),
-            State: randState(),
-            Zip: randZipCode(),
+            lastName: randLastName(),
+            firstName: randFirstName(),
+            phoneNumber: randPhoneNumber(),
+            company: randBrand(),
+            number: randNumber(),
+            address: randAddress(),
+            city: randCity(),
+            state: randState(),
+            zip: randZipCode(),
         }
 
 
@@ -46,16 +46,16 @@ const {
 
             cy.get('.woocommerce-MyAccount-navigation-link--edit-address > a').click()
             cy.get(':nth-child(1) > .title > .edit').click()
-            cy.get('#billing_first_name').type(user.FirstName)
-            cy.get('#billing_last_name').type(user.LastName)
-            cy.get('#billing_company').type(user.Company)
+            cy.get('#billing_first_name').type(user.firstName)
+            cy.get('#billing_last_name').type(user.lastName)
+            cy.get('#billing_company').type(user.company)
             cy.get('#select2-billing_country-container').click().type('Cabo Verde' + '{Enter}')
-            cy.get('#billing_address_1').type(user.Number)
+            cy.get('#billing_address_1').type(user.number)
             cy.get('#billing_address_2').type('Cabo Verde')
-            cy.get('#billing_city').type(user.City)
-            cy.get('#billing_state').type(user.State)
-            cy.get('#billing_postcode').type(user.Zip)
-            cy.get('#billing_phone').type(user.PhoneNumber)
+            cy.get('#billing_city').type(user.city)
+            cy.get('#billing_state').type(user.state)
+            cy.get('#billing_postcode').type(user.zip)
+            cy.get('#billing_phone').type(user.phoneNumber)
             cy.get('#billing_email').clear().type(user.email)
             cy.get('.button').click()
 
